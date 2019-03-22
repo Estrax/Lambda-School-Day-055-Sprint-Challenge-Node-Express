@@ -44,9 +44,9 @@ router.route('/:id')
             const description = req.body.description;
             const completed = req.body.completed || false;
 
-            if(!name || !description || !completed) return res.status(400).json({ errorMessage: "Please provide all the data for the project." });
-            const projectUpdated = await db.update(req.params.id, { name, description, completed })
-            if(project === null) return res.status(404).json({ message: "The project with the specified ID does not exist." });
+            if(!name || !description) return res.status(400).json({ errorMessage: "Please provide all the data for the project." });
+            const projectUpdated = await db.update(req.params.id, { name, description })
+            if(projectUpdated === null) return res.status(404).json({ message: "The project with the specified ID does not exist." });
             return res.status(200).json(projectUpdated);
         } catch(e) {
             return res.status(500).json({ error: "The project information could not be modified." });
