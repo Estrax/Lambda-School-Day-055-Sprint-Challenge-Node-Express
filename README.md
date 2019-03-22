@@ -28,7 +28,11 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 Two parts of Express we had in curriculum this week are: `middleware` and server-side routing with `router`.
 
-- [ ] Describe Middleware?
+- [x] Describe Middleware?
+
+Middleware is a function being a bridge between function executor and the function itself. It allows to, for example, filter the unnecessary requests before the function is going to be executed.
+
+In general, Middleware is a software layer between network layer, application layer and data layer.
 
 - [ ] Describe a Resource?
 
