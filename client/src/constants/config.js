@@ -1,1 +1,1 @@
-export const API_URL = 'http://localhost:5000/api';
+export const API_URL = 'https://ls-day055-sprint-challenge-api.herokuapp.com/api';
