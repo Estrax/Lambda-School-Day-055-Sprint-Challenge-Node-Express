@@ -62,4 +62,14 @@ router.route('/:id')
         }
     });
 
+router.route('/:id/actions')
+    .get(async (req, res) => {
+        try {
+            const actions = await db.getProjectActions(req.params.id);
+            return res.status(200).json(actions);
+        } catch(e) {
+            return res.status(500).json({ error: "Cannot get actions for this project" });
+        }
+    });
+
 module.exports = router;
