@@ -18,7 +18,7 @@ const Action = (props) => {
         {props.singleAction && <Card className="card" style={cardBorder}>
             <ActionTitle>{props.description}</ActionTitle>
             <Contents>{props.notes}</Contents>
-
+            <Contents>Completed: {String(props.completed)}</Contents>
             <Contents><Link to={`/projects/${props.project.id}`}>{props.project.name}</Link></Contents>
             {props.singleAction &&
             <Buttons>
@@ -29,6 +29,7 @@ const Action = (props) => {
 
         {!props.singleAction && <CardSingle className="card" style={cardBorder}>
             <ActionTitle>{props.description}</ActionTitle>
+            {props.completed && <Contents>(Already completed)</Contents>}
             <Contents>{props.project.name}</Contents>
         </CardSingle>}
         </>
