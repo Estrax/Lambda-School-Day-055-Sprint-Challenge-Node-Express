@@ -40,6 +40,8 @@ In REST APIs, resource is everything that API needs to handle, e.g. data pulled 
 
 - [ ] What can the API return to help clients know if a request was successful?
 
+The HTTP status code in the 2xx range. For example, 200 for the default `success`, 201 for `created` or 202 for `accepted`.
+
 - [ ] How can we partition our application into sub-applications?
 
 ## Project Setup
