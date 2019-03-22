@@ -3,10 +3,12 @@
 // code away!
 const express = require('express');
 const initMiddleware = require('./src/serverMiddleware');
+const router = require('./src/router/');
 require('dotenv').config();
 
 const app = express();
 initMiddleware(app);
+app.use('/api', router);
 
 const PORT = process.env.PORT || 5000;
 const HOSTNAME = process.env.HOSTNAME || 'localhost';
