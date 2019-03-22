@@ -34,7 +34,9 @@ Middleware is a function being a bridge between function executor and the functi
 
 In general, Middleware is a software layer between network layer, application layer and data layer.
 
-- [ ] Describe a Resource?
+- [x] Describe a Resource?
+
+In REST APIs, resource is everything that API needs to handle, e.g. data pulled from the database to be sent to client.
 
 - [ ] What can the API return to help clients know if a request was successful?
 
