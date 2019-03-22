@@ -187,7 +187,7 @@ export function deleteProject(id){
             const deletedProject = await axios.delete(API_URL+`/projects/${id}`);
             if(deletedProject.status === 200){
                 dispatch(receiveDelete(id));
-                return history.push('/projects/');
+                return history.push('/');
             }else{
                 dispatch(errorDelete(deletedProject.data.error));
                 return Promise.reject(deletedProject.data);

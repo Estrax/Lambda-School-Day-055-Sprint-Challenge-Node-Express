@@ -45,7 +45,15 @@ export const CardSingle = styled.div`
     margin: 20px auto
 `
 
-export const Title = styled.h1`
+export const Title = styled.h3`
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    margin-bottom: 0;
+    padding: 10px;
+`;
+
+export const Completed = styled.p`
     text-align: center;
     color: black;
     text-decoration: none;
