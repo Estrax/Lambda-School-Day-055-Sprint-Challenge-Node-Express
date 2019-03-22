@@ -2,9 +2,9 @@
 
 This challenge allows you to practice the concepts and techniques learned over the past Sprint and apply them in a concrete project. This Sprint explored Building RESTful Web APIs with Express and Node.js, Server-side Routing, Express Middleware & Deployment and Good Practices. In your challenge for this Sprint, you will demonstrate proficiency by creating an Web API using Node.js and Express.
 
-API: [https://ls-day055-sprint-challenge-api.herokuapp.com/api/projects](Link (to /api/projects))
+API: [Link to /api/projects](https://ls-day055-sprint-challenge-api.herokuapp.com/api/projects)
 
-CLIENT: [https://ls-day-055-sprint-challenge-client.netlify.com](Link)
+CLIENT: [Link](https://ls-day-055-sprint-challenge-client.netlify.com)
 
 ## Instructions
 
