@@ -47,9 +47,9 @@ router.route('/:id')
             const notes = req.body.notes;
             const completed = req.body.completed || false;
 
-            if(!project_id || !description || !notes || !completed) return res.status(400).json({ errorMessage: "Please provide all the data for the action." });
+            if(!project_id || !description || !notes) return res.status(400).json({ errorMessage: "Please provide all the data for the action." });
             const actionUpdated = await db.update(req.params.id, { project_id, description, notes, completed })
-            if(action === null) return res.status(404).json({ message: "The action with the specified ID does not exist." });
+            if(actionUpdated === null) return res.status(404).json({ message: "The action with the specified ID does not exist." });
             return res.status(200).json(actionUpdated);
         } catch(e) {
             return res.status(500).json({ error: "The action information could not be modified." });

@@ -141,7 +141,7 @@ export function updateAction(action){
     return async dispatch => {
         try {
             dispatch(requestUpdate(action));
-            const updatedAction = await axios.put(API_URL+`/actions/${action.id}`, action);
+            const updatedAction = await axios.put(API_URL+`/actions/${action.id}`, {description: action.description, notes: action.notes, completed: action.completed, project_id: action.project_id});
             if(updatedAction.status === 200){
                 dispatch(receiveUpdate(updatedAction.data));
                 return history.push(`/actions/${action.id}`);
@@ -183,8 +183,8 @@ export function deleteAction(id){
             dispatch(requestDelete(id));
             const deletedAction = await axios.delete(API_URL+`/actions/${id}`);
             if(deletedAction.status === 200){
-                dispatch(receiveDelete(id));;
-                return history.push('/');
+                dispatch(receiveDelete(id));
+                return history.push('/actions');
             }else{
                 dispatch(errorDelete(deletedAction.data.error));
                 return Promise.reject(deletedAction.data);

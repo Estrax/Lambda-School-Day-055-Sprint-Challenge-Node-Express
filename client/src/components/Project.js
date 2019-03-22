@@ -12,7 +12,7 @@ import {
     CardSingle,
     StyledLink
 } from '../styles';
-// import Action from './Action';
+import Action from './Action';
 
 const Project = (props) => {
     return (
@@ -28,13 +28,13 @@ const Project = (props) => {
                 <ButtonHalf onClick={props.deleteProject} className="btn btn-danger">DELETE</ButtonHalf>
             </Buttons>}
         </Card>}
-        {/* {props.singleProject && props.projectActions &&
+        {props.singleProject && props.projectActions &&
             props.projectActions.map(action => 
                 <StyledLink key={action.id} to={`/actions/${action.id}`}>
-                    <Action key={action.id} text={action.text} project_id={action.project_id} project={{id: props.id, name: ''}} singleAction={false} />
+                    <Action key={action.id} id={action.id} description={action.description} notes={action.notes} completed={action.completed} project_id={action.project_id} project={{id: props.id, name: ''}} singleAction={false} />
                 </StyledLink>
                 )
-        } */}
+        }
 
         {!props.singleProject && <CardSingle className="card" style={cardBorder}>
             <Title>{props.name} {props.completed && "(completed)"}</Title>

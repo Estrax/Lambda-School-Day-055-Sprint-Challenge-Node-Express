@@ -61,7 +61,7 @@ export const Completed = styled.p`
     padding: 10px;
 `;
 
-export const PostTitle = styled.h3`
+export const ActionTitle = styled.h3`
     text-align: center;
     color: black;
     text-decoration: none;
