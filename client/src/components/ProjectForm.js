@@ -98,7 +98,6 @@ class ProjectForm extends Component {
                         type="checkbox"
                         name="completed"
                         onChange={this.handleCheckbox}
-                        value={this.state.completed}
                         checked={this.state.completed}
                     />
 
