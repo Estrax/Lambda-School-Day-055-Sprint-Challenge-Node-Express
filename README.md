@@ -42,7 +42,9 @@ In REST APIs, resource is everything that API needs to handle, e.g. data pulled 
 
 The HTTP status code in the 2xx range. For example, 200 for the default `success`, 201 for `created` or 202 for `accepted`.
 
-- [ ] How can we partition our application into sub-applications?
+- [x] How can we partition our application into sub-applications?
+
+We can split our code to the number of files, each containing a part of application - e.g. router, controller, model, etc. Then we just need to import them in the appropriate files, e.g. in the app index file.
 
 ## Project Setup
 
